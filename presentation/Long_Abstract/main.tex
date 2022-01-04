@@ -1,0 +1,169 @@
+	\documentclass[a4paper,11pt]{article}
+	
+	\usepackage[italian]{babel}
+	\usepackage{soul}
+	\usepackage{mathtools}
+	\usepackage{amssymb,amsmath,amsfonts}
+	\usepackage[utf8]{inputenc}
+	\usepackage{graphicx}
+	\usepackage{geometry}
+	\usepackage{float}
+	\usepackage{csquotes}
+	\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+	\usepackage{fancyhdr}
+	\usepackage{gensymb}
+	\usepackage{units}
+	\usepackage{hhline}
+	\usepackage{siunitx}
+	\usepackage{color}
+	\usepackage[export]{adjustbox}
+	\usepackage[nottoc,numbib]{tocbibind}
+	\usepackage[super,comma]{natbib}
+	\usepackage{titling}
+	\usepackage[italian]{datetime}
+	%\usepackage{subfig}
+	\usepackage{subcaption}
+	\usepackage{cancel}
+	\usepackage{comment}
+	\definecolor{blunipi}{RGB}{43,68,111}
+
+
+    \newcommand\eqeg{\stackrel{\mathclap{\normalfont\mbox{e.g.}}}{=}}
+
+	%\captionsetup[figure]{labelformat=empty}
+	
+	%\renewcommand{\today}{\thisdayofweekname\ \theday\ \monthname\ \the\year}
+	
+	\geometry{a4paper, left=30mm, right=30mm, top=30mm, bottom=30mm}
+	
+	\title{Misure di precisione dei rapporti di decadimento del bosone W con l'esperimento CMS} 
+	\author{Giulio Cordova}
+	\date{\today}
+	
+	\pagestyle{fancy}
+	\lfoot{Tesi di Laurea in Fisica}
+	\rfoot{Giulio Cordova} 
+	
+	\begin{document}
+		\newgeometry{left=20mm, right=15mm, top=12mm, bottom=10mm}
+		\begin{titlepage}
+			\thispagestyle{empty}
+			\begin{figure}
+				\includegraphics[width=31.5mm,right]{./Cherubino}
+			\end{figure}
+			\vspace*{-38mm}\hspace{-6mm}\textbf{\textcolor{blunipi}{\large{Dipartimento di Fisica}}}\\\\
+			\hspace{-2mm}\textcolor{blunipi}{\large{Università di Pisa}}
+			
+			\vspace{15mm}
+			\begin{center}
+				\textcolor{blunipi}{\huge{\textbf{\thetitle}}}\\\vspace*{7mm}
+			%	\textcolor{blunipi}{\theauthor}\\\vspace*{10mm}
+				\textcolor{blunipi}{\thedate}\\\vspace*{10mm}
+				
+				%Forse i margini dovrebbero andare un po' più stretti
+				\begin{tabular}{rl}
+					\textbf{Candidato:} 
+					& Giulio Cordova \\ \\
+					%& \texttt{g.cordova@studenti.unipi.it}\\\\
+                    
+                	\textbf{Relatore:} 
+					& Paolo Azzurri \\
+					%& \texttt{paulo.azzurri@cern.ch}\\\\
+					
+				\end{tabular}
+				\vspace*{5mm}
+\end{center}
+								
+						\begin{abstract}		
+                Negli ultimi anni, alcuni decadimenti semileptonici dei mesoni B si stanno rivelando di grande interesse in quanto sembrano non rispettare il principio predetto dal modello standard (SM) di universalità leptonica (LU), ovvero la proprietà da parte dei bosoni di gauge di accoppiarsi con i leptoni indipendentemente dal loro sapore. Tali misure tuttavia non sono di facile interpretazione a causa dell’incertezza dovuta alla cromodinamica quantistica (QCD). Un test alternativo può essere eseguito studiando i decadimenti del bosone W, le cui Branching Fraction (BF) adroniche forniscono inoltre informazioni su alcuni elementi della matrice Cabibbo-Kobayashi-Maskawa (CKM) e sulla costante di accoppiamento forte $\alpha_s$.
+
+L’analisi presentata si basa su un sample di collisioni protone-protone a un’energia nel centro di massa di \SI{13}{\tera\eV} corrispondente a una luminosità integrata di \SI{35.9}{\per\femto\barn} misurato dall’esperimento CMS nel Run di LHC del 2016. Gli eventi sono stati raccolti online usando come trigger un singolo elettrone o muone isolato sopra una determinata soglia di impulso trasverso. Offline si definiscono categorie di stati finali discriminati a seconda del tipo e numero di leptoni, di getti adronici e di getti b-taggati, ovvero derivanti da quark b. 
+Le sorgenti di interesse sono dominate dagli eventi t\=t(\textrightarrow WW+bb), mentre contributi minori sono dati da tW, WW e W+jets. Il background è caratterizzato prevalentemente da jets provenienti da processi QCD. 
+Gli eventi vengono ricostruiti dall'algoritmo Particle Flow con la combinazione di informazioni riguardanti la presenza di tracce cariche nel tracciatore, l'energia rilasciata nei calorimetri adronici ed elettronici o le hit nel sistema muonico. Ulteriori metodi permettono l'identificazione di getti, il b-tagging e la ricostruzione di tau adronici.
+
+I valori delle BF si derivano da una stima di massima verosimiglianza che fitta i dati su template ottenuti da eventi simulati. Partendo da un sample Monte Carlo t\=t ho ricreato lo spettro dei leptoni differenziati per tipologia di evento usando come variabile di binning l’impulso trasverso del leptone d’interesse. L’inclusione di questa variabile cinematica, unita all’analisi di particelle isolate, si rivela di particolare utilità in quanto i leptoni leggeri decaduti dal tau tendono ad avere un impulso minore di quelli che decadono direttamente dal W. Ho ricostruito inoltre la distribuzione del parametro d'impatto, in quanto può essere un discriminante per leptoni prompt, a causa del tempo di volo del tau prima del decadimento. Questa osservabile è stata in precedenza  utilizzata da ATLAS per un'analisi dedicata ma non era inclusa in questo esperimento di CMS.
+
+Le BF misurate da CMS per il decadimento del W rispettivamente in elettroni, muoni, tau e adroni sono quindi (10.83±0.01±0.10)\%, (10.94±0.01±0.08)\%, (10.77±0.05±0.21)\%, (67.46±0.04±0.28)\%. I risultati sono consistenti con l’ipotesi LU dello SM, con una precisione che eccede misure precedenti. 
+Con queste misure si verifica inoltre con successo l’unitarietà delle prime due righe della matrice CKM, si stima con buona precisione l’elemento di mixing $\vline V_{cs} \vline$, e la costante di accoppiamento forte $\alpha_s$ risulta in linea col Modello Standard.
+
+
+
+\end{abstract}
+		\end{titlepage}
+		
+		\begin{comment}
+		
+		\makeatother
+		\restoregeometry
+		\newpage
+		
+		\tableofcontents
+
+		\newpage
+		\section{Introduzione e  motivazione}
+		
+		I slide: COSA  STORICA. COM'ERA LO STATO PRIMA. METTO L'ACCENTO SULLA QUESTIONE DEI TAU. CI SONO DEGLI ECCESSI DEI TAU ANCHE A PIù BASSA ENERGIA CON QUARK PESANTI (PLOT LEP)
+		
+		AD LHC COME SI MISURA? Si usano i W prodotti da decadimenti di top
+		
+		non posso usare quelli singoli perché mi perdo tutti i decadiemnti in adroni
+		
+		
+		
+		
+		
+		
+		
+                    Il seguente elaborato prevede l'analisi dei rapporti di decadimento del bosone W, usando le misure di precisione effettuate dall'esperimento CMS. Le suddette misure si rivelano di particolare interasse, in quanto fornisco un test per l'universalità leptonica.\\
+                    
+                    L'analisi viene effettuata studiando i decadimenti di coppie di quark top (ttbar), i quali decadono a loro volta in un W e un quark bottom (b). Il sample degli eventi ttbar si può ottenere selezionando eventi con un jet da quark b e un leptone isolato (elettrone o muone). Dello stato finale WW+bb si sta quindi usando uno dei bosoni W come trigger e si sfrutta l'altro per la misura dei rapporti di decadimento d'interesse.  \\
+                    
+                    da 40 milioni a 1000
+                    
+                    
+                    OBIETTIVO: capire le branching ratio del W. 
+                    PROBLEMA: i tau decadono velocemente. Come faccio a sapere se gli elettroni o i muoni vengono dal W o dal decadimento del tau? 
+                    
+                    L'analisi si effettua su esperimenti Montecarlo, quindi ho la variabile PdGId che mi dice il tipo di evento (in cosa decade il W). Il problema è che quando ho i dati veri non ho questo indicatore.
+                    
+                    Guardo la distribuzione in pT perché è una delle variabili che mi descrive la cinematica del processo. Mi aspetto che gli elettroni e muoni che vengono dal tau abbiano basso impulso...
+                    
+                    Adotto la ricostruzione delle particelle vista nell'articolo (tracciatore + energia nel calorimetro per elettroni o piani a muoni per muoni). Vado a vedere come si distribuiscono gli impulsi sia di elettroni che di muoni differenziato per tipo di evento (dal PdGId).
+                    
+                    Perché ho muoni negli eventi di elettroni? Sono quelle che vengono dal tau. Richiedo che sia isolata. 
+                    
+                    Ora posso dire l'elettrone ISOLATO che ho ricostruito da dove viene, cioé se l'evento era veramente un W->e
+                    Stessa cosa per il mu
+                    
+                    ALTRE DOMANDE: Qual sono gli altri eventi con il tau?
+                    
+                    ATLAS ha fatto misure sui parametri d'impatto 
+                    
+                    
+                    IL MIO INTERESSE STA NEL TAU
+                    
+                    Dal decadimento adronico ricaviamo informazioni sulla matrice CKM, in particolare sull'elemento Vcs
+                    
+                    
+                    \section{Processo Fisico}
+                    
+                    \section{Il rivelatore CMS e ricostruzione delle particelle}
+                    
+                    \section{Il software ROOT e l'analisi dati}
+                    
+                    
+        \newpage
+
+
+    
+
+
+        \newpage
+	\begin{thebibliography}{1}
+		%\bibitem{label}AUTORE, \textit{titolo}, editore, luogo, anno
+		\bibitem{huang}Kerson Huang: \textit{Statistical Mechanics}, Wiley, 2008
+		\bibitem{kardar}Mehran Kardar: \textit{Statistical Physics of Particles}, Cambridge, 2007
+	\end{thebibliography}
+	\end{comment}
+	
+\end{document}
